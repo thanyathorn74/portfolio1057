@@ -1,0 +1,164 @@
+
+/* Basic CSS */
+body{
+    background-color: rgba(220, 140, 19, 0.486);
+}
+h1{
+    background-color:rgb(173, 91, 46);
+    color: rgb(235, 229, 119);
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+}
+h2{
+    background-color:rgb(173, 91, 46);
+    color: rgb(235, 229, 119);
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+}
+h3{
+    color: rgb(173, 91, 46);
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    text-decoration: underline;
+}
+h4{
+    color: rgb(224, 79, 79);
+    font-family: system-ui;
+    /* text-decoration: underline; */
+    text-align: left;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+div{
+    text-align: center;
+}
+.flex_container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+.flex_container > div{
+    border: 2px solid rgb(249, 237, 6);
+	flex: 1 1 250px; 
+	max-width: 300px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+a:link{
+	color: #FF0000; 
+}
+.img-container {
+    width: 30%;
+    margin: 50px auto; 
+    text-align: center; 
+}
+
+.img-container img {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    display: block; 
+    margin: 0 auto;
+}
+
+
+/* Grid display */
+.grid-container{
+    display: grid;
+    grid-template-columns: 10% auto 20%;
+    grid-gap: 10px;
+}
+
+.grid-container > div{
+    border: 1px solid black;
+    font-size: 20px;
+    text-align: center;
+    background-color:white;
+}
+
+#header{
+    grid-column: 1 / span 3;
+}
+
+#menu{
+    grid-column: 1 / span 1;
+}
+
+#main{
+    grid-column: 2 / span 1;
+}
+#right{
+    grid-column: 3 / span 1;
+}
+
+#footer{
+    grid-column: 1 / span 3;
+}
+
+
+@media only screen and (max-width: 768px) {
+	.grid-container{
+        display: grid;
+        grid-template-columns: auto 20%;
+        grid-gap: 10px;
+    }
+    #header{
+        grid-column: 1 / span 2;
+    }
+    
+    #menu{
+        grid-column: 1 / span 2;
+        text-align: left;
+    }
+    
+    #menu div{
+        display: inline-block;
+    }
+
+    #main{
+        grid-column: 1 / span 1;
+    }
+    #right{
+        grid-column: 2 / span 1;
+    }
+    #footer{
+        grid-column: 1 / span 2;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+	
+	  .grid-container{
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 10px;
+    }
+    #header{
+        grid-column: 1 / span 1;
+    }
+    
+    #menu{
+        grid-column: 1 / span 1;
+    }
+    
+    #main{
+        grid-column: 1 / span 1;
+    }
+    #right{
+        grid-column: 1 / span 1;
+    }
+    #footer{
+        grid-column: 1 / span 1;
+    }
+}
+#right img{
+    width:100%;
+}
+#right div{
+    margin-bottom: 20px;
+}
+ul{
+    text-align:left;
+}

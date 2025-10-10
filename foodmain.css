@@ -1,0 +1,53 @@
+body{
+    background-color:rgb(255, 235, 253);
+}
+h1{
+    color: rgb(227, 13, 24);
+    font-family: system-ui;
+    text-align: center;
+    font-size: 60px;
+    
+}
+h2{
+    font-family: system-ui;
+    text-decoration: underline;
+}
+h4{
+    color: blue;
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    margin-left: 720px;
+}
+img{
+    width: 30%;
+    border: 5px solid rgb(224, 64, 109);
+    border-radius: 8px;
+}
+#food{ 
+    width: 45%;
+    border: 5px solid rgb(255, 138, 92);
+    border-radius: 8px;
+    
+}
+div{
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+.parent {
+    display: flex;
+    justify-content: center;   /* จัดให้อยู่ตรงกลาง */
+    gap: 10px;                 /* ลดระยะห่างให้น้อยลง */
+}
+
+.div_display img {
+    width: 100%;    /* รูปขยายเต็มกล่อง */
+    height: auto;
+    border: 5px solid rgb(224, 64, 109);
+    border-radius: 8px; /* เพิ่มความโค้งมนเล็กน้อย (สวยขึ้น) */
+}
+
+.div_display {
+    flex: 0 0 30%;  /* กล่องแต่ละอันกว้างประมาณ 30% ของหน้าจอ */
+    max-width: 30%;
+}

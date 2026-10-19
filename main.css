@@ -1,4 +1,5 @@
 /* main.css: Final Version with Contact Image Fix */
+@import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap");
 
 :root {
@@ -109,14 +110,13 @@ p { font-size: 19px; }
     background-color: var(--bg-dark-main);
     color: var(--text-light);
     text-align: left;
-    min-height: calc(100vh - var(--nav-height));
-    box-sizing: border-box;
+    height: calc(100vh - var(--nav-height));
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
-    padding: 40px 5%;
+    padding: 0 5%;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -126,39 +126,30 @@ p { font-size: 19px; }
     align-items: center;
     width: 100%;
 }
-/* รูปโปรไฟล์ขนาดจริง 354x426 จำกัดความกว้างไว้ไม่ให้รูปแตก */
 .header-image {
-    width: 100%;
-    max-width: 380px;
-    aspect-ratio: 354 / 426;
-    margin: 0 auto;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-}
-.header-image img {
-    display: block;
+    position: relative;
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    padding-top: 100%;
+    margin: 0;
+}
+.header-image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    transform: translate(-50%, -50%);
     object-fit: cover;
+    max-height: 100vh;
 }
 .header-content {
     padding-left: 60px;
     z-index: 10;
 }
 #header h1 { font-size: 60px; margin-bottom: 10px; }
-#header p { font-size: 24px; color: var(--text-muted); margin: 0 0 12px; }
-#header .header-internship {
-    display: inline-block;
-    font-size: 18px;
-    color: var(--text-light);
-    border: 1px solid var(--primary-color);
-    border-radius: 4px;
-    padding: 4px 12px;
-    margin-bottom: 20px;
-}
-.header-content > a { display: block; }
-#header .header-course { font-size: 16px; margin-top: 24px; }
+#header p { font-size: 24px; color: var(--text-muted); }
 .highlight { color: var(--primary-color); }
 
 /* Resume Section */
@@ -182,26 +173,6 @@ p { font-size: 19px; }
     font-size: 18px;
     color: var(--text-muted);
 }
-.resume-item h4 {
-    font-size: 20px;
-    margin: 12px 0 2px;
-}
-.resume-item strong {
-    color: var(--text-light);
-    font-weight: 600;
-}
-.resume-item .resume-meta {
-    color: var(--accent-color);
-    font-size: 16px;
-}
-.resume-item ul {
-    margin: 8px 0 0;
-    padding-left: 22px;
-    color: var(--text-muted);
-    font-size: 18px;
-}
-.resume-item li { margin: 4px 0; }
-.resume-entry + .resume-entry { margin-top: 20px; }
 
 /* Project Page */
 #main[style*="display: flex"] {
@@ -332,11 +303,11 @@ p { font-size: 19px; }
 }
 
 /* Mobile Adjustments */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1366px) {
     .header-grid { grid-template-columns: 1fr; }
-    .header-image { max-width: 300px; }
+    .header-image { padding-top: 60%; }
     .header-content {
-        padding: 40px 0 20px;
+        padding: 60px 0 20px;
         text-align: center;
     }
     #header h1 { font-size: 50px; }
